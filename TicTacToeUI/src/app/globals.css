@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .gradientAnimation {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 10s ease infinite;
+    background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+  }
+
+  .gradientAnimation2 {
+    background: linear-gradient(-85deg, #acb78c, #cdd47c, #f6ef2b, #f4ff1c);
+    animation: gradient 10s ease infinite;
+    background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+  }
+
+  .gradientAnimation-border {
+    animation: borderGradient 5s ease infinite;
+  }
+
+  .gradientBG {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+  }
+
+  .hideScroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes borderGradient {
+    0% {
+      border-color: #ee7752;
+    }
+    25% {
+      border-color: #e73c7e;
+    }
+    50% {
+      border-color: #23a6d5;
+    }
+    75% {
+      border-color: #f4ff1c;
+    }
+    100% {
+      border-color: #ee7752;
+    }
+  }
+}
